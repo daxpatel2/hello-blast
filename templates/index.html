@@ -8,6 +8,10 @@
     <script src="home.js"></script>
 
     <style>
+        /* change this to a space theme if possible */
+        body{
+            background-image: -webkit-linear-gradient(gray,white);
+        }
 
         .topnav {
             background-color: #333;
@@ -33,20 +37,51 @@
             background-color: #04AA6D;
             color: white;
         }
+
+        .namebox {
+            background: white;
+            border-style: solid;
+            border-color: #04AA6D;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 40px 25px;
+            box-shadow: 0px 2px 2px 2px;
+        }
+        .namebox h1{
+            font-family: Montserrat,Georgia, Times, 'Times New Roman', serif;
+        }
+        /* make button look cooler */
+        .namebox button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     </style>
 
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Chat App</a>
+        <a class="active" href="#home">Hello Blast</a>
         <a href="#chat">Chat</a>
         <a href="#history">History</a>
         <a href="#login">Login</a>
       </div>
 
-    <p>
-        HelloBlast is the name of the app
-    </p>
+      <div class="namebox">
+        <h1>Login Here</h1>
+
+        <input type="text" name="Enter your name" placeholder="Enter name here">
+        <!-- Set button action, dont need to back check name should just go straight to the chat room, since its a local chat room-->
+        <button class="perform" type="button">Submit</button>
+
+      </div>
 </body>
 </html>
